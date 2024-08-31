@@ -28,17 +28,18 @@ game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.Position +=
 game.CoreGui["Cryptics 'Unique' Design"].MainShell.Position += UDim2.new(0,0,0,0)
 game.CoreGui["Cryptics 'Unique' Design"].MainShell.MainFrame["Script Editor Tab"]["Scripting Buttons"].ExecuteClipboard.Position += UDim2.new(-.45,0,-8.7,0)
 game.CoreGui["Cryptics 'Unique' Design"].MainShell.MainFrame["Console Tab"].Position += UDim2.new(-1.35,0,0,0)
-spawn(function()
-	game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.A.MouseButton1Click:Connect(function()
+game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.A.MouseButton1Click:Connect(function()
+	spawn(function()
 		game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.Visible = true
 		game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.A.Visible = false
-		game.CoreGui["Cryptics 'Unique' Design"].MainShell.MainFrame["Script Editor Tab"].Visible = true
 	end)
-	game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.MouseButton1Click:Connect(function()
+end)
+game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.MouseButton1Click:Connect(function()
+	spawn(function()
 		game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.A.Visible = true
 		game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.Visible = false
 		game.CoreGui["Cryptics 'Unique' Design"].MainShell.MainFrame["Script Editor Tab"].Visible = true
 	end)
 end)
 game.CoreGui["Cryptics 'Unique' Design"].Toggle.Visible = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/mobile%20shift%20lock.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/mobile%20shift%20lock.lua"))()
