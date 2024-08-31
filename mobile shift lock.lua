@@ -84,6 +84,3 @@ ShiftLockButton.MouseButton1Click:Connect(
         end
     end
 )
-
-local ShiftLockAction = ContextActionService:BindAction("Shift Lock", ShiftLock, false, "On")
-ContextActionService:SetPosition("Shift Lock", UDim2.new(0.8, 0, 0.8, 0))
