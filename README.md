@@ -17,4 +17,4 @@ spawn(LFunction)
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/fix%20cryptic.lua", true))()
 ```
-![MuMuPlayer_4MHDbNh5X2](https://github.com/user-attachments/assets/62564319-6d00-477d-9576-a7652be88ca7)
+![MuMuPlayer_4MHDbNh5X2](https://github.com/user-attachments/assets/e4a4a640-15e1-49c3-8169-72930de7591f)
