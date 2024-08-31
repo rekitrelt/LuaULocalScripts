@@ -41,3 +41,4 @@ spawn(function()
 	end)
 end)
 game.CoreGui["Cryptics 'Unique' Design"].Toggle.Visible = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/mobile%20shift%20lock.lua", true))()
