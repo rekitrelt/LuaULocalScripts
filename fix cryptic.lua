@@ -42,4 +42,6 @@ game.CoreGui["Cryptics 'Unique' Design"].MainShell.SideShell.Frame.D.MouseButton
 	end)
 end)
 game.CoreGui["Cryptics 'Unique' Design"].Toggle.Visible = false
+game.Players.LocalPlayer.AutoJumpEnabled = false
+game.Players.LocalPlayer.Character.Humanoid.AutoJumpEnabled = false
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/mobile%20shift%20lock.lua"))()
