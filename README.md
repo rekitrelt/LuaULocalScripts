@@ -15,6 +15,6 @@ spawn(LFunction)
 
 ## fix cryptic mobile executor for emulator
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/fix%20cryptic.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/fix%20cryptic.lua"))()
 ```
 ![MuMuPlayer_4MHDbNh5X2](https://github.com/user-attachments/assets/e4a4a640-15e1-49c3-8169-72930de7591f)
