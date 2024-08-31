@@ -1,6 +1,7 @@
 # LuaULocalScripts
 
-VSCode exec Celery install (I did not make this VSCode plugin, only modified the autoexec script):
+## VSCode exec Celery install
+(I did not make this VSCode plugin, only modified the autoexec script):
 
 1. Install the Roblox WS Server extension for Visual Studio Code from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=incognito-developer.roblox-ws-server&ssr=false#version-history)
 
@@ -11,3 +12,9 @@ repeat task.wait() until game:IsLoaded()
 local Success, LFunction = pcall(loadstring, loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/vscode.lua", true))())
 spawn(LFunction)
 ```
+
+## fix cryptic mobile executor for emulator
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/fix%20cryptic.lua", true))()
+```
+![MuMuPlayer_4MHDbNh5X2](https://github.com/user-attachments/assets/62564319-6d00-477d-9576-a7652be88ca7)
