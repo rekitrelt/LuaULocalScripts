@@ -8,7 +8,7 @@ if not SMethod then return lp:Kick("Executor is too shitty.") end
 
 local Main = function()
 	WebSocket = SMethod("ws://localhost:9000/")
-    local Closed = false
+    	local Closed = false
 
 	if not WebSocket then return end
 
@@ -40,6 +40,6 @@ local Main = function()
 	
 	while task.wait(1) do
 		local Success, Error = pcall(Main)
-		if not Success then print(Error) end
+		if not Success then print(Error) return end
 	end
 end)
