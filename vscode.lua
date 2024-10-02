@@ -1,12 +1,12 @@
 spawn(function()
-repeat task.wait() until game:IsLoaded()
-
-local lp = game.Players.LocalPlayer
-local SMethod = (WebSocket and WebSocket.connect)
-
-if not SMethod then return lp:Kick("Executor is too shitty.") end
-
-local Main = function()
+	repeat task.wait() until game:IsLoaded()
+	
+	local lp = game.Players.LocalPlayer
+	local SMethod = (WebSocket and WebSocket.connect)
+	
+	if not SMethod then return lp:Kick("Executor is too shitty.") end
+	
+	local Main = function()
 	WebSocket = SMethod("ws://localhost:9000/")
     	local Closed = false
 
@@ -40,6 +40,6 @@ local Main = function()
 	
 	while task.wait(1) do
 		local Success, Error = pcall(Main)
-		if not Success then print(Error) return end
+		if not Success then warn("websocket fail") return end
 	end
 end)
