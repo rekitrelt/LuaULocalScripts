@@ -9,7 +9,7 @@
 
 ```lua
 repeat task.wait() until game:IsLoaded()
-local Success, LFunction = pcall(loadstring, loadstring(game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/vscode.lua", true))())
+local Success, LFunction = pcall(loadstring, game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/vscode.lua"))
 spawn(LFunction)
 ```
 
