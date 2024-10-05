@@ -4,10 +4,11 @@
 -- https://discord.gg/wx4ThpAsmw
 
 local function string_find(s, pattern)
-			local err, success = pcall(function()
+			local success, err = pcall(function()
 				return string.find(s, pattern, nil, true)
 			end)
 			if not success then
+				print("subscript")
 				print(err)
 			else
 				return success
