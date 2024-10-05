@@ -2443,7 +2443,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 													end
 													return true
 												end
-print("here1?")
+
 												LinkedSource_type = string.find(LinkedSource, "%a") and "hash" or "id"
 
 												local asset = LinkedSource_type .. "=" .. LinkedSource
