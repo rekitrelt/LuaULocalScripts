@@ -62,7 +62,6 @@ do
 		filename
 	)()
 
-  print("here")
 	finder({
 		-- readbinarystring = 'string.find(...,"bin",nil,true)', -- ! Could match some unwanted stuff (getbinaryindex)
 		-- request = 'string.find(...,"request",nil,true) and not string.find(...,"internal",nil,true)',
@@ -77,7 +76,6 @@ do
 		protectgui = 'string.find(...,"protect",nil,true) and string.find(...,"ui",nil,true) and not string.find(...,"un",nil,true)',
 		setthreadidentity = 'string.find(...,"identity",nil,true) and string.find(...,"set",nil,true)',
 	}, true, 10)
-  print("yup")
 end
 
 local identify_executor = identifyexecutor or getexecutorname or whatexecutor
@@ -2445,7 +2443,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 													end
 													return true
 												end
-
+print("here1?")
 												LinkedSource_type = string.find(LinkedSource, "%a") and "hash" or "id"
 
 												local asset = LinkedSource_type .. "=" .. LinkedSource
