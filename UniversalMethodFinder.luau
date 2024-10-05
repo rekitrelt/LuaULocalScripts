@@ -92,7 +92,7 @@ local function finder(Query, ForceSearch, CustomCallLimit, PrintResults)
 
 	do -- Load patterns
 		local function Find(String, Pattern)
-			local err, success = pcall(function()
+			local success, err = pcall(function()
 				return string.find(String, Pattern, nil, true)
 			end)
 			if not success then
