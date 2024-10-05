@@ -92,8 +92,14 @@ local function finder(Query, ForceSearch, CustomCallLimit, PrintResults)
 
 	do -- Load patterns
 		local function Find(String, Pattern)
-			print(String)
-			return string.find(String, Pattern, nil, true)
+			local err, success = pcall(function()
+				return string.find(String, Pattern, nil, true)
+			end)
+			if not success then
+				print(err)
+			else
+				return success
+			end
 		end
 		for methodname, pattern in next, Query do
 			if not globalcontainer[methodname] or ForceSearch then
