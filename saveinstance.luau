@@ -4,8 +4,14 @@
 -- https://discord.gg/wx4ThpAsmw
 
 local function string_find(s, pattern)
-	print(s)
-	return string.find(s, pattern, nil, true)
+			local err, success = pcall(function()
+				return string.find(s, pattern, nil, true)
+			end)
+			if not success then
+				print(err)
+			else
+				return success
+			end
 end
 
 local function ArrayToDictionary(t, hydridMode, valueOverride)
