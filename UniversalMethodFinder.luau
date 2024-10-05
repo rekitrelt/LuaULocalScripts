@@ -96,6 +96,7 @@ local function finder(Query, ForceSearch, CustomCallLimit, PrintResults)
 				return string.find(String, Pattern, nil, true)
 			end)
 			if not success then
+				print("subscript")
 				print(err)
 			else
 				return success
