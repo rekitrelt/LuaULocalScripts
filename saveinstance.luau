@@ -4,7 +4,6 @@
 -- https://discord.gg/wx4ThpAsmw
 
 local function string_find(s, pattern)
-  print(s, pattern)
 	return string.find(s, pattern, nil, true)
 end
 
@@ -63,6 +62,7 @@ do
 		filename
 	)()
 
+  print("here")
 	finder({
 		-- readbinarystring = 'string.find(...,"bin",nil,true)', -- ! Could match some unwanted stuff (getbinaryindex)
 		-- request = 'string.find(...,"request",nil,true) and not string.find(...,"internal",nil,true)',
@@ -77,6 +77,7 @@ do
 		protectgui = 'string.find(...,"protect",nil,true) and string.find(...,"ui",nil,true) and not string.find(...,"un",nil,true)',
 		setthreadidentity = 'string.find(...,"identity",nil,true) and string.find(...,"set",nil,true)',
 	}, true, 10)
+  print("yup")
 end
 
 local identify_executor = identifyexecutor or getexecutorname or whatexecutor
