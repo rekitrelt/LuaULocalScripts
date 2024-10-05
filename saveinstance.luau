@@ -4,6 +4,7 @@
 -- https://discord.gg/wx4ThpAsmw
 
 local function string_find(s, pattern)
+	print(s)
 	return string.find(s, pattern, nil, true)
 end
 
