@@ -1,6 +1,12 @@
 if not fakeplr then
 	fakeplr = 45223049 -- User ID of who you want to become 
 end
+if not plricon then
+	plricon = "" -- image for icon
+end
+if not plremoji then
+	plremoji = "" -- emoji e.g.  for verified
+end
 
 local lp = game.Players.LocalPlayer
 local alias = game:GetService("Players"):GetNameFromUserIdAsync(fakeplr)
@@ -34,8 +40,18 @@ local function tabbar()
 	for _, v in pairs(game.CoreGui.RoactAppExperimentProvider:GetDescendants()) do
 		if v.Name == "p_"..tostring(lp.UserId) then
 			for _, b in pairs(v:GetDescendants()) do
-				if b.Name == "PlayerName" and b.ClassName == "TextLabel" then
-					setname({b, alias})
+				if b.Name == "PlayerName" and b.ClassName == "Frame" and b.Parent.Name == "OverlayFrame" then
+					for _, c in pairs(b:GetChildren()) do
+						c:Destroy()
+					end
+					local objs = game:GetObjects("rbxassetid://71118221200082")
+					local inst = objs[1]
+					inst.Emoji.Text = plremoji
+					setname({inst.ChildrenWrapper.PlayerName, alias})
+					inst.Parent = b
+				end
+				if b.Name == "PlayerIcon" and b.ClassName == "ImageLabel" then
+					setimage({b, plricon})
 				end
 			end
 		end
