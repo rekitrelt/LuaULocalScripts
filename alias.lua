@@ -1,4 +1,4 @@
-if not fakeplr then
+if not fakeplr or fakeplr == 0 then
 	fakeplr = 45223049 -- User ID of who you want to become 
 end
 if not plricon then
