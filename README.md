@@ -1,5 +1,14 @@
 # LuaULocalScripts
 
+## Disguise yourself as someone else; alias
+
+```lua
+local config = [[
+fakeplr = 1
+]]
+loadstring(config..game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/alias.lua"))()
+```
+
 ## VSCode exec Celery install
 (I did not make this VSCode plugin, only modified the autoexec script):
 
