@@ -1,5 +1,5 @@
-if not fakeplr then
-	fakeplr = 45223049 -- User ID of who you want to become 
+if not fakeplr or tonumber(fakeplr) == 0 then
+	fakeplr = 1 -- User ID of who you want to become 
 end
 if not plricon then
 	plricon = "" -- image for icon
