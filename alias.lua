@@ -1,4 +1,4 @@
-if not fakeplr or fakeplr == 0 then
+if not fakeplr then
 	fakeplr = 45223049 -- User ID of who you want to become 
 end
 if not plricon then
@@ -51,7 +51,9 @@ local function tabbar()
 					inst.Parent = b
 				end
 				if b.Name == "PlayerIcon" and b.ClassName == "ImageLabel" then
-					setimage({b, plricon})
+					if plricon ~= "" then
+						setimage({b, "rbxthumb://type=Asset&id="..tostring(plricon).."&w=150&h=150"})
+					end
 				end
 			end
 		end
