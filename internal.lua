@@ -689,11 +689,11 @@ if isfile("internalscripts.json") then
 				confirm.TextLabel.Text = "Are you sure you want to delete "..savedscript.Text.."?"
 				local noanswer
 				local yesanswer = confirm.Buttons.yes.MouseButton1Click:Once(function()
-					savedcode[savedscript] = value
+					savedcode[savedscript] = nil
 					if savedscript:FindFirstChild("butt") then
-						filesaves[savedscript.butt.Text] = value
+						filesaves[savedscript.butt.Text] = nil
 					else
-						filesaves[savedscript.Text] = value
+						filesaves[savedscript.Text] = nil
 					end
 					local filecontent = HttpService:JSONEncode(filesaves)
 					writefile("internalscripts.json", filecontent)
