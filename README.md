@@ -5,6 +5,8 @@
 ```lua
 local config = [[
 fakeplr = 1
+plricon = ""
+plremoji = "" --  for verified
 ]]
 loadstring(config..game:HttpGet("https://raw.githubusercontent.com/rekitrelt/LuaULocalScripts/main/alias.lua"))()
 ```
