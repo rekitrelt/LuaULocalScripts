@@ -1,4 +1,4 @@
-local fakeplr = 1 -- User ID of who you want to become 
+local fakeplr = 45223049 -- User ID of who you want to become 
 if _G.fakeplr then
   fakeplr = _G.fakeplr
 end
