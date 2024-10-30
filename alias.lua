@@ -1,6 +1,5 @@
-local fakeplr = 1 -- User ID of who you want to become 
-if _G.fakeplr then
-  fakeplr = _G.fakeplr
+if not fakeplr then
+	fakeplr = 45223049 -- User ID of who you want to become 
 end
 
 local lp = game.Players.LocalPlayer
